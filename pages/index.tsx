@@ -21,6 +21,7 @@ import Card2 from '../components/Card/Card2';
 import PortfolioGrid from '../components/Portfolio';
 import Carousel from 'react-multi-carousel';
 import Promo from '../components/Promo';
+import Projects from '../components/Portfolio';
 
 const Home: NextPage = () => {
   return(
@@ -28,7 +29,7 @@ const Home: NextPage = () => {
   <Navbar />
   <HeroSlide />
   <Featured />
-  <PortfolioGrid />
+  <Projects />
   
   
   </>
