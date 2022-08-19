@@ -177,9 +177,9 @@ export default function Example() {
   })
 
   return (
-    <div className="w-full max-w-7xl px-2 py-16 sm:px-0">
+    <div className="w-full max-w-7xl mx-auto px-2 py-16 sm:px-0 text-white">
       <Tab.Group>
-        <Tab.List className="flex space-x-1 rounded-xl bg-blue-900/20 p-1">
+        <Tab.List className="max-w-md mx-auto flex space-x-1 rounded-xl bg-black p-1">
           {Object.keys(categories).map((category) => (
             <Tab
               key={category}

@@ -17,7 +17,7 @@ type ISectionProps = {
 
 const Section = (props: ISectionProps) => (
   <div
-    className={`max-w-7xl text-white bg-black overflow-hidden border-b ${props.yPadding ? props.yPadding : 'py-0'} ${props.xPadding}`}
+    className={`max-w-7xl mx-auto text-white bg-black overflow-hidden border-b ${props.yPadding ? props.yPadding : 'py-0'} ${props.xPadding}`}
   >
    
     {(props.title || props.description) && (

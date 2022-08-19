@@ -58,7 +58,7 @@ const Footer = () => (
         </div>
     </div>
     <div className="container mx-auto text-center py-12 mt-12 border-t border-gray-200 text-xs uppercase">
-        <div>Copyright &copy; 2022 ADEYMAX ENTERPRISES</div>
+        <div>Copyright &copy; 2022 POSH INTERIORS</div>
         
     </div>
   </Section>

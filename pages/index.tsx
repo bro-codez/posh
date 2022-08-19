@@ -27,6 +27,7 @@ const Home: NextPage = () => {
   <>
   <Navbar />
   <HeroSlide />
+  <Featured />
   <PortfolioGrid />
   
   

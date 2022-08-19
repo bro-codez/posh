@@ -3,15 +3,16 @@
 import { Fragment } from 'react';
 
 import { Disclosure, Menu, Transition } from '@headlessui/react';
-import { LoginIcon , MenuIcon, XIcon } from '@heroicons/react/outline';
+import { ArrowRightIcon, ChevronRightIcon, LoginIcon , MenuIcon, XIcon } from '@heroicons/react/outline';
 
 const navigation = [
   { name: 'Home', href: '/', current: false },
   { name: 'Projects', href: '/', current: false },
-  { name: 'Services', href: '/about', current: false },
-  { name: 'Shop', href: '/contact', current: false },  
+  { name: 'Services', href: '#', current: false },
+  { name: 'Shop', href: '#', current: false },  
   { name: 'Blog', href: '#', current: false },
-  { name: 'Contact us', href: '#', current: false }
+  { name: 'About', href: '/about', current: false },
+  { name: 'Contact us', href: '/contact', current: false }
 ];
 
 function classNames(...classes:any) {
@@ -20,7 +21,7 @@ function classNames(...classes:any) {
 
 export default function Navbar() {
   return (
-    <Disclosure as="nav" className=" sticky top-0 bg-black text-white z-50 h-24 py-2 ">
+    <Disclosure as="nav" className=" sticky top-0 bg-black text-white z-50 h-20 py-2 ">
       {({ open }) => (
         <>
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 bg-transparent">
@@ -58,9 +59,9 @@ export default function Navbar() {
                         href={item.href}
                         className={classNames(
                           item.current
-                            ? 'bg-blue-900 text-white font-extrabold toggleColour'
-                            : 'text-gray-300 hover:bg-gray-700 hover:text-white font-extrabold text-lg',
-                          'px-2 py-2 rounded-md text-lg hover:border-4 font-extrabold'
+                            ? 'bg-blue-900 text-white toggleColour'
+                            : 'text-gray-300 hover:bg-gray-700 hover:text-white  text-lg',
+                          'px-2 py-2 rounded-md text-md hover:border-4'
                         )}
                         aria-current={item.current ? 'page' : undefined}
                       >
@@ -70,14 +71,16 @@ export default function Navbar() {
                   </div>
                 </div>
               </div>
-            {/*  <div className="absolute inset-y-0 right-0 flex items-center pr-2 sm:static sm:inset-auto sm:ml-6 sm:pr-0">
-                <button
+              <div className="absolute inset-y-0 right-0 flex items-center pr-2 sm:static sm:inset-auto sm:ml-6 sm:pr-0">
+              <button
                   type="button"
-                  className="bg-gray-800 p-1 rounded-sm  text-white hover:text-white focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-offset-gray-800 focus:ring-white"
-                >
-                  <span className="sr-only">View notifications</span>
-                  <LoginIcon className="h-6 w-4" aria-hidden="true" />
+                  className="border-2 w-full py-2 px-4 flex rounded-sm  text-white hover:text-grey-400 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-offset-gray-800 focus:ring-white"
+                >GET QUOTE
+                  <ChevronRightIcon className="h-6 w-6 " aria-hidden="true" />
+                  
                 </button>
+                </div>
+            {/*
 
                  Profile dropdown 
                 <Menu as="div" className="ml-3 relative">
