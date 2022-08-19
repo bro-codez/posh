@@ -1,201 +1,230 @@
-
-import { Fragment, useState } from 'react'
-import { Dialog, Popover, Tab, Transition } from '@headlessui/react'
-import { MenuIcon, SearchIcon, ShoppingBagIcon, XIcon } from '@heroicons/react/outline'
-
-const navigation = {
-  categories: [
-    {
-      id: 'gypsum',
-      name: 'Gypsum',
-      featured: [
-        {
-          name: 'New Arrivals',
-          href: '#',
-          imageSrc: '/images/gyp1.jpg',
-          imageAlt: 'Beautiful Gypsum.',
-        },
-        {
-          name: 'New Arrivals',
-          href: '#',
-          imageSrc: '/images/gyp3.jpg',
-          imageAlt: 'Beautiful Gypsum',
-        },
-        {
-          name: 'New Arrivals',
-          href: '#',
-          imageSrc: '/images/gyp2.jpg',
-          imageAlt: 'Beautiful Gypsum',
-        },
-        {
-          name: 'New Arrivals',
-          href: '#',
-          imageSrc: '/images/gyp4.jpg',
-          imageAlt: 'Beautiful Gypsum',
-        },
-      ],
-    },
-    {
-      id: 'fittings',
-      name: 'Fittings',
-      featured: [
-        {
-          name: 'fittings',
-          href: '#',
-          imageSrc: 'images/fit1.jpg',
-          imageAlt: 'Drawstring top with elastic loop closure and textured interior padding.',
-        },
-        {
-        
-          href: '#',
-          imageSrc: 'images/fit2.jpg',
-          imageAlt:
-            'Three shirts in gray, white, and blue arranged on table with same line drawing of hands and shapes overlapping on front of shirt.',
-        },
-        
-        {
-        
-          href: '#',
-          imageSrc: 'images/fit3.jpg',
-          imageAlt:
-            'Three shirts in gray, white, and blue arranged on table with same line drawing of hands and shapes overlapping on front of shirt.',
-        },
-        
-        {
-        
-          href: '#',
-          imageSrc: 'images/fit4.jpg',
-          imageAlt:
-            'Three shirts in gray, white, and blue arranged on table with same line drawing of hands and shapes overlapping on front of shirt.',
-        },
-      ],
-      
-    },
-    {
-      id: 'furniture',
-      name: 'Furniture',
-      featured: [
-        {
-    
-          href: '#',
-          imageSrc: '/images/fun1.jpg',
-          imageAlt: 'furniture',
-        },
-        {
-          
-          href: '#',
-          imageSrc: '/images/fun2.jpg',
-          imageAlt:
-            'furniture',
-        },
-        
-        {
-          
-          href: '#',
-          imageSrc: '/images/fun3.jpg',
-          imageAlt:
-            'furniture',
-        },
-        
-        {
-          
-          href: '#',
-          imageSrc: '/images/fun5.jpg',
-          imageAlt:
-            'furniture',
-        },
-      ],
-      
-    },
-  ]
-}
+import { useState } from 'react'
+import { Tab } from '@headlessui/react'
 
 function classNames(...classes) {
   return classes.filter(Boolean).join(' ')
 }
 
 export default function Example() {
-  
+  let [categories] = useState({
+    All: [
+      {
+        id: 1,
+        name: 'Earthen Bottle',
+        href: '#',
+        price: '$48',
+        imageSrc: 'https://tailwindui.com/img/ecommerce-images/category-page-04-image-card-01.jpg',
+        imageAlt: 'Tall slender porcelain bottle with natural clay textured body and cork stopper.',
+      },
+      {
+        id: 2,
+        name: 'Nomad Tumbler',
+        href: '#',
+        price: '$35',
+        imageSrc: 'https://tailwindui.com/img/ecommerce-images/category-page-04-image-card-02.jpg',
+        imageAlt: 'Olive drab green insulated bottle with flared screw lid and flat top.',
+      },
+      {
+        id: 3,
+        name: 'Focus Paper Refill',
+        href: '#',
+        price: '$89',
+        imageSrc: 'https://tailwindui.com/img/ecommerce-images/category-page-04-image-card-03.jpg',
+        imageAlt: 'Person using a pen to cross a task off a productivity paper card.',
+      },
+      {
+        id: 4,
+        name: 'Machined Mechanical Pencil',
+        href: '#',
+        price: '$35',
+        imageSrc: 'https://tailwindui.com/img/ecommerce-images/category-page-04-image-card-04.jpg',
+        imageAlt: 'Hand holding black machined steel mechanical pencil with brass tip and top.',
+      },{
+    id: 1,
+    name: 'Earthen Bottle',
+    href: '#',
+    price: '$48',
+    imageSrc: 'https://tailwindui.com/img/ecommerce-images/category-page-04-image-card-01.jpg',
+    imageAlt: 'Tall slender porcelain bottle with natural clay textured body and cork stopper.',
+  },
+  {
+    id: 2,
+    name: 'Nomad Tumbler',
+    href: '#',
+    price: '$35',
+    imageSrc: 'https://tailwindui.com/img/ecommerce-images/category-page-04-image-card-02.jpg',
+    imageAlt: 'Olive drab green insulated bottle with flared screw lid and flat top.',
+  },
+  {
+    id: 3,
+    name: 'Focus Paper Refill',
+    href: '#',
+    price: '$89',
+    imageSrc: 'https://tailwindui.com/img/ecommerce-images/category-page-04-image-card-03.jpg',
+    imageAlt: 'Person using a pen to cross a task off a productivity paper card.',
+  },
+  {
+    id: 4,
+    name: 'Machined Mechanical Pencil',
+    href: '#',
+    price: '$35',
+    imageSrc: 'https://tailwindui.com/img/ecommerce-images/category-page-04-image-card-04.jpg',
+    imageAlt: 'Hand holding black machined steel mechanical pencil with brass tip and top.',
+  },
+    ],
+    Gypsum: [
+      {
+        id: 1,
+        name: 'Earthen Bottle',
+        href: '#',
+        price: '$48',
+        imageSrc: 'https://tailwindui.com/img/ecommerce-images/category-page-04-image-card-01.jpg',
+        imageAlt: 'Tall slender porcelain bottle with natural clay textured body and cork stopper.',
+      },
+      {
+        id: 2,
+        name: 'Nomad Tumbler',
+        href: '#',
+        price: '$35',
+        imageSrc: 'https://tailwindui.com/img/ecommerce-images/category-page-04-image-card-02.jpg',
+        imageAlt: 'Olive drab green insulated bottle with flared screw lid and flat top.',
+      },
+      {
+        id: 3,
+        name: 'Focus Paper Refill',
+        href: '#',
+        price: '$89',
+        imageSrc: 'https://tailwindui.com/img/ecommerce-images/category-page-04-image-card-03.jpg',
+        imageAlt: 'Person using a pen to cross a task off a productivity paper card.',
+      },
+      {
+        id: 4,
+        name: 'Machined Mechanical Pencil',
+        href: '#',
+        price: '$35',
+        imageSrc: 'https://tailwindui.com/img/ecommerce-images/category-page-04-image-card-04.jpg',
+        imageAlt: 'Hand holding black machined steel mechanical pencil with brass tip and top.',
+      },
+    ],
+    Furniture: [
+      {
+        id: 1,
+        name: 'Earthen Bottle',
+        href: '#',
+        price: '$48',
+        imageSrc: 'https://tailwindui.com/img/ecommerce-images/category-page-04-image-card-01.jpg',
+        imageAlt: 'Tall slender porcelain bottle with natural clay textured body and cork stopper.',
+      },
+      {
+        id: 2,
+        name: 'Nomad Tumbler',
+        href: '#',
+        price: '$35',
+        imageSrc: 'https://tailwindui.com/img/ecommerce-images/category-page-04-image-card-02.jpg',
+        imageAlt: 'Olive drab green insulated bottle with flared screw lid and flat top.',
+      },
+      {
+        id: 3,
+        name: 'Focus Paper Refill',
+        href: '#',
+        price: '$89',
+        imageSrc: 'https://tailwindui.com/img/ecommerce-images/category-page-04-image-card-03.jpg',
+        imageAlt: 'Person using a pen to cross a task off a productivity paper card.',
+      },
+      {
+        id: 4,
+        name: 'Machined Mechanical Pencil',
+        href: '#',
+        price: '$35',
+        imageSrc: 'https://tailwindui.com/img/ecommerce-images/category-page-04-image-card-04.jpg',
+        imageAlt: 'Hand holding black machined steel mechanical pencil with brass tip and top.',
+      },
+    ],
+    Fittings: [
+      {
+        id: 1,
+        name: 'Earthen Bottle',
+        href: '#',
+        price: '$48',
+        imageSrc: 'https://tailwindui.com/img/ecommerce-images/category-page-04-image-card-01.jpg',
+        imageAlt: 'Tall slender porcelain bottle with natural clay textured body and cork stopper.',
+      },
+      {
+        id: 2,
+        name: 'Nomad Tumbler',
+        href: '#',
+        price: '$35',
+        imageSrc: 'https://tailwindui.com/img/ecommerce-images/category-page-04-image-card-02.jpg',
+        imageAlt: 'Olive drab green insulated bottle with flared screw lid and flat top.',
+      },
+      {
+        id: 3,
+        name: 'Focus Paper Refill',
+        href: '#',
+        price: '$89',
+        imageSrc: 'https://tailwindui.com/img/ecommerce-images/category-page-04-image-card-03.jpg',
+        imageAlt: 'Person using a pen to cross a task off a productivity paper card.',
+      },
+      {
+        id: 4,
+        name: 'Machined Mechanical Pencil',
+        href: '#',
+        price: '$35',
+        imageSrc: 'https://tailwindui.com/img/ecommerce-images/category-page-04-image-card-04.jpg',
+        imageAlt: 'Hand holding black machined steel mechanical pencil with brass tip and top.',
+      },
+    ],
+  })
 
   return (
-    <div className="bg-white">
-
-      
-  
-      <div className="relative bg-white">
-       
-
-        <nav aria-label="Top" className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="border-b border-gray-200">
-            <div className="h-16 flex items-center">
-         
-
-              {/* Flyout menus */}
-              <Popover.Group className="mx-auto ">
-                <div className="h-full flex space-x-1">
-                  {navigation.categories.map((category) => (
-                    <Popover key={category.name} className="flex">
-                      {({ open }) => (
-                        <>
-                          <div className="relative flex">
-                            <Popover.Button
-                              className={classNames(
-                                open
-                                  ? 'border-indigo-600 text-indigo-600'
-                                  : 'border-transparent bg-blue-400 text-gray-700 hover:text-gray-800',
-                                'relative z-10 flex items-center transition-colors ease-out duration-200 text-sm font-medium border-b-2 my-4 pt-px'
-                              )}
-                            >
-                              {category.name}
-                            </Popover.Button>
-                          </div>
-
-                            <Popover.Panel className="absolute top-full inset-x-0 text-sm text-gray-500">
-                              {/* Presentational element used to render the bottom shadow, if we put the shadow on the actual panel it pokes out the top, so we use this shorter element to hide the top of the shadow */}
-                              <div className="absolute inset-0 top-1/2 bg-white shadow" aria-hidden="true" />
-
-                    
-                                <div className="max-w-7xl mx-auto px-8">
-                          
-                                    <div className="lg:grid grid-cols-4 gap-x-8">
-                                    <div className="col-span-1">
-                                      {category.featured.map((item) => (
-                                        <div key={item.name} className="group relative text-base sm:text-sm">
-                                          <div className="aspect-w-1 aspect-h-1 rounded-lg  overflow-hidden group-hover:opacity-75">
-                                          
-                                            
-                                          
-                                            <img
-                                              src={item.imageSrc}
-                                              alt={item.imageAlt}
-                                              className=" object-cover"
-                                            />
-                                            
-                                          </div>
-                                          
-                                          
-                                        </div>
-                                      ))}
-                                    </div>
-                                    </div>
-                                   
-                  
-                                </div>
-                    
-                            </Popover.Panel>
-                
-                        </>
-                      )}
-                    </Popover>
-                  ))}
-
-                </div>
-              </Popover.Group>
-
-            </div>
-          </div>
-        </nav>
-      </div>
+    <div className="w-full max-w-7xl px-2 py-16 sm:px-0">
+      <Tab.Group>
+        <Tab.List className="flex space-x-1 rounded-xl bg-blue-900/20 p-1">
+          {Object.keys(categories).map((category) => (
+            <Tab
+              key={category}
+              className={({ selected }) =>
+                classNames(
+                  'w-full rounded-lg py-2.5 text-sm font-medium leading-5 text-blue-700',
+                  'ring-white ring-opacity-60 ring-offset-2 ring-offset-blue-400 focus:outline-none focus:ring-2',
+                  selected
+                    ? 'bg-white shadow'
+                    : 'text-blue-100 hover:bg-white/[0.12] hover:text-white'
+                )
+              }
+            >
+              {category}
+            </Tab>
+          ))}
+        </Tab.List>
+        <Tab.Panels className="mt-2">
+          {Object.values(categories).map((category, idx) => (
+            <Tab.Panel
+              key={idx}
+              className={classNames(
+                'rounded-xl bg-white p-3',
+                'ring-white ring-opacity-60 ring-offset-2 ring-offset-blue-400 focus:outline-none focus:ring-2'
+              )}
+            >
+                <div className="grid grid-cols-1 gap-y-10 sm:grid-cols-2 gap-x-6 lg:grid-cols-3 xl:grid-cols-4 xl:gap-x-8">
+          {category.map((items) => (
+            <a key={items.id} href={items.href} className="group">
+              <div className="w-full aspect-w-1 aspect-h-1 bg-gray-200 rounded-lg overflow-hidden xl:aspect-w-7 xl:aspect-h-8">
+                <img
+                  src={items.imageSrc}
+                  alt={items.imageAlt}
+                  className="w-full h-full object-center object-cover group-hover:opacity-75"
+                />
+              </div>
+              <h3 className="mt-4 text-sm text-gray-700">{items.name}</h3>
+              <p className="mt-1 text-lg font-medium text-gray-900">{items.price}</p>
+            </a>
+          ))}
+        </div>
+            </Tab.Panel>
+          ))}
+        </Tab.Panels>
+      </Tab.Group>
     </div>
   )
 }

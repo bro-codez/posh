@@ -1,5 +1,5 @@
 import type{ NextPage } from 'next';
-import { Carousel1 } from '../components/Carousel'
+import { Carousel1, HeroSlide } from '../components/Carousel'
 
 
 import {
@@ -20,13 +20,16 @@ import Card2 from '../components/Card/Card2';
 
 import PortfolioGrid from '../components/Portfolio';
 import Carousel from 'react-multi-carousel';
+import Promo from '../components/Promo';
 
 const Home: NextPage = () => {
   return(
   <>
   <Navbar />
-  <Carousel1 />
+  <HeroSlide />
   <PortfolioGrid />
+  
+  
   </>
 )};
 

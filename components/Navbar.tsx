@@ -8,9 +8,10 @@ import { LoginIcon , MenuIcon, XIcon } from '@heroicons/react/outline';
 const navigation = [
   { name: 'Home', href: '/', current: false },
   { name: 'Projects', href: '/', current: false },
-  { name: 'About us', href: '/about', current: false },
-  { name: 'Contact us', href: '/contact', current: false },  
-  { name: 'Partner', href: '#', current: false }
+  { name: 'Services', href: '/about', current: false },
+  { name: 'Shop', href: '/contact', current: false },  
+  { name: 'Blog', href: '#', current: false },
+  { name: 'Contact us', href: '#', current: false }
 ];
 
 function classNames(...classes:any) {
@@ -19,7 +20,7 @@ function classNames(...classes:any) {
 
 export default function Navbar() {
   return (
-    <Disclosure as="nav" className="mr-0 sticky top-0 bg-indigo-800 z-50 h-24 py-2 ">
+    <Disclosure as="nav" className=" sticky top-0 bg-black text-white z-50 h-24 py-2 ">
       {({ open }) => (
         <>
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 bg-transparent">
@@ -49,8 +50,8 @@ export default function Navbar() {
                     alt="Posh Logo"
                   />
                 </div>
-                <div className="hidden absolute right-20 sm:block sm:ml-6">
-                  <div className="flex space-x-4 ">
+                <div className="hidden w-full relative mx-auto md:block sm:ml-6">
+                  <div className="flex justify-center space-x-4 ">
                     {navigation.map((item) => (
                       <a
                         key={item.name}
