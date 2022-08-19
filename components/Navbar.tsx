@@ -23,7 +23,6 @@ export default function Navbar() {
       {({ open }) => (
         <>
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 bg-transparent">
-          <div className=" max-w-screen mr-0 px-10 ml-60 md:right-0 bg-red-800 text-white text-center transform rotate-15">UNDER CONSTRUCTION</div>
 
             <div className="relative flex items-center justify-between h-16">
               <div className="absolute inset-y-0 left-0 flex items-center sm:hidden">
@@ -42,12 +41,12 @@ export default function Navbar() {
                   <img
                     className="block lg:hidden h-16 w-auto"
                     src=""
-                    alt="Adeymax"
+                    alt="Posh Logo"
                   />
                   <img
                     className="hidden lg:block h-16 w-auto"
                     src=""
-                    alt="Adeymax"
+                    alt="Posh Logo"
                   />
                 </div>
                 <div className="hidden absolute right-20 sm:block sm:ml-6">

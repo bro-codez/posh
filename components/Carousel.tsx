@@ -38,7 +38,7 @@ export const Carousel1 = (_props: any) => {
     superLargeDesktop: {
       // the naming can be any, depends on you.
       breakpoint: { max: 4000, min: 3000 },
-      items: 1,
+      items: 3,
     },
     desktop: {
       breakpoint: { max: 3000, min: 1024 },
@@ -71,8 +71,8 @@ export const Carousel1 = (_props: any) => {
           autoPlay={true}
           autoPlaySpeed={2000}
           centerMode={false}
-          className=" text-center mx-auto lg:h-1/2"
-          containerClass=""
+          className=" "
+          containerClass="relative"
           rewindWithAnimation={true}
           focusOnSelect={false}
           keyBoardControl
@@ -86,9 +86,9 @@ export const Carousel1 = (_props: any) => {
              
               
               <div className="relative z-10 text-center py-40 " >
-                <h1 className="text-white text-center text-6xl font-display font-bold mb-12 animate-fade-in-down">{item.name}</h1>
+                <h1 className=" text-center text-6xl font-display font-bold mb-12 animate-fade-in-down">{item.name}</h1>
               
-              <p className=" leading-relaxed  font-bold text-white text-lg pt-2 lg:text-4xl">
+              <p className=" leading-relaxed  font-bold text-lg pt-2 lg:text-4xl">
                   {item.description}
               </p>
               </div>
@@ -103,38 +103,7 @@ export const Carousel1 = (_props: any) => {
             
           ))}
         </Carousel>
-        {/*  <div className="relative max-w-7xl mx-10 px-2 bg-white border-4 rounded-lg w/12 lg:mx-auto -mt-16">
-     <div className="flex flex-col mx-auto md:flex-row mt-6">
-
-      <fieldset className="h-full w-full md:w-1/4 mb-4">
-      <label htmlFor="where" className="block text-md text-gray-900 mb-2">Where to</label>
-		  <input id="where" type="text" className="block w-11/12 rounded-sm  bg-white py-2 px-3 text-xl" name="destination" placeholder="Enter key-words" />
-      </fieldset>
-      
-      <fieldset className="w-full md:w-1/4 mb-4">
-      <label htmlFor="when" className="block text-sm text-gray-900 mb-2">When</label>
-		  <input id="when" type="date" className="block w-11/12 rounded-sm  bg-white py-2 px-3 text-xl" name="date" />
-      </fieldset>
-         
-      <fieldset className="w-full md:w-1/4 mb-4">
-      <label htmlFor="type" className="block text-sm text-gray-900 mb-2">Type</label>
-      <select id="type" className="block w-11/12 rounded-sm bg-white py-2 px-3 text-xl">
-      <option>Adventure</option>
-      {activities.map((activity, index) => (
-       <option value={activity} key={index}>
-                {activity}
-              </option>
-            ))}
-          </select>
-      </fieldset>
-      <button className="inline-block w-full md:w-1/4 bg-blue-800 text-white uppercase text-sm tracking-widest font-heading px-8 py-4">Explore</button>
     
-      </div> 
-
-      
-    
-    
-  </div>*/}
         
         </div>
       

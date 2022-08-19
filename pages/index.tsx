@@ -19,10 +19,13 @@ import { PeopleReview } from '../components/Review';
 import Card2 from '../components/Card/Card2';
 
 import PortfolioGrid from '../components/Portfolio';
+import Carousel from 'react-multi-carousel';
 
 const Home: NextPage = () => {
   return(
   <>
+  <Navbar />
+  <Carousel1 />
   <PortfolioGrid />
   </>
 )};
