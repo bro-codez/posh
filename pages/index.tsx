@@ -1,5 +1,5 @@
 import type{ NextPage } from 'next';
-import { Carousel1, HeroSlide } from '../components/Carousel'
+import {HeroSlide } from '../components/Carousel'
 
 
 import {
