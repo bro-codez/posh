@@ -1,5 +1,5 @@
 {
-  "name": "Posh Interiors",
+  "name": "posh_interiors",
   "private": true,
   "scripts": {
     "dev": "next dev",
