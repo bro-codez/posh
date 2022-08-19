@@ -133,19 +133,19 @@ export default function Projects() {
   })
 
   return (
-    <div className="w-full max-w-7xl mx-auto px-2 py-16 sm:px-0 text-white">
+    <div className="w-full max-w-7xl mx-auto px-2 py-16 sm:px-0 text-black">
       <Tab.Group>
-        <Tab.List className="max-w-md mx-auto flex space-x-1 rounded-xl bg-black p-1">
+        <Tab.List className="max-w-md mx-auto flex space-x-1 rounded-xl p-1">
           {Object.keys(categories).map((category) => (
             <Tab
               key={category}
               className={({ selected }) =>
                 classNames(
-                  'w-full rounded-lg py-2.5 text-sm font-medium leading-5 text-blue-700',
-                  'ring-white ring-opacity-60 ring-offset-2 ring-offset-blue-400 focus:outline-none focus:ring-2',
+                  'w-full rounded-lg py-2.5 text-sm font-medium leading-5 text-black',
+                  'ring-white ring-opacity-60 ring-offset-2 ring-offset-black focus:outline-none focus:ring-2',
                   selected
                     ? 'bg-white shadow'
-                    : 'text-blue-100 hover:bg-white/[0.12] hover:text-white'
+                    : 'text-black hover:bg-white/[0.12] hover:text-black'
                 )
               }
             >

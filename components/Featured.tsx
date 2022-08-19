@@ -50,7 +50,7 @@ export default function Featured() {
     
       <div className="max-w-7xl mx-auto px-4 sm:px-6 ">
         <div className="lg:text-center">
-          <p className="mt-2 text-3xl leading-8 tracking-tight text-indigo-900 sm:text-4xl">
+          <p className="mt-2 text-3xl leading-8 tracking-tight text-black sm:text-4xl">
         WHAT WE DO
           </p>
         </div>

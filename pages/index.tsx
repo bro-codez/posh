@@ -22,15 +22,19 @@ import PortfolioGrid from '../components/Portfolio';
 import Carousel from 'react-multi-carousel';
 import Promo from '../components/Promo';
 import Projects from '../components/Portfolio';
+import { Base } from '../components/layout/Base';
 
 const Home: NextPage = () => {
   return(
   <>
-  <Navbar />
+  <Base>
   <HeroSlide />
   <Featured />
   <Projects />
-  
+  <PeopleReview />
+  <Promo />
+  </Base>
+   
   
   </>
 )};
