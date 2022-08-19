@@ -3,22 +3,34 @@ import { AnnotationIcon, BadgeCheckIcon, ShieldCheckIcon, ScaleIcon, UsersIcon }
 
 const features = [
   {
+ 
+    id: 1,
     name: 'RESIDENTIAL DESIGN',
-    description:
-      'Lorem ipsum, dolor sit amet consectetur adipisicing elit. Maiores impedit perferendis suscipit eaque, iste dolor cupiditate blanditiis ratione.',
-    icon: BadgeCheckIcon,
+    href: '#',
+    description: `Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
+    incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis.`,
+    imageSrc: 'https://tailwindui.com/img/ecommerce-images/category-page-04-image-card-01.jpg',
+    imageAlt: 'Tall slender porcelain bottle with natural clay textured body and cork stopper.',
   },
   {
-    name: 'OFFICE DESIGN',
-    description:
-      'Lorem ipsum, dolor sit amet consectetur adipisicing elit. Maiores impedit perferendis suscipit eaque, iste dolor cupiditate blanditiis ratione.',
-    icon: ScaleIcon,
-  },
-  {
+ 
+    id: 1,
     name: 'COMMERCIAL DESIGN',
-    description:
-      'Lorem ipsum, dolor sit amet consectetur adipisicing elit. Maiores impedit perferendis suscipit eaque, iste dolor cupiditate blanditiis ratione.',
-    icon: ShieldCheckIcon,
+    href: '#',
+    description: `Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
+    incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis.`,
+    imageSrc: 'https://tailwindui.com/img/ecommerce-images/category-page-04-image-card-01.jpg',
+    imageAlt: 'Tall slender porcelain bottle with natural clay textured body and cork stopper.',
+  },
+  {
+ 
+    id: 1,
+    name: 'OFFICE DESIGN',
+    href: '#',
+    description: `Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
+                 incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis.`,
+    imageSrc: 'https://tailwindui.com/img/ecommerce-images/category-page-04-image-card-01.jpg',
+    imageAlt: 'Tall slender porcelain bottle with natural clay textured body and cork stopper.',
   }
 ]
 
@@ -33,19 +45,22 @@ export default function Featured() {
         </div>
 
         <div className="mt-10">
-          <dl className=" md:space-y-0 md:grid md:grid-cols-3 md:gap-x-8 md:gap-y-10">
-            {features.map((feature) => (
-              <div key={feature.name} className="relative">
-                <dt>
-                  <div className="absolute flex items-center justify-center h-12 w-12 rounded-md bg-indigo-500 text-white">
-                    <feature.icon className="h-6 w-6" aria-hidden="true" />
-                  </div>
-                  <p className="ml-16 text-lg leading-6 font-medium text-orange-400">{feature.name}</p>
-                </dt>
-                <dd className="mt-2 ml-16 text-base text-gray-500">{feature.description}</dd>
+        <div className="grid grid-cols-1 gap-y-10 sm:grid-cols-2 gap-x-6 lg:grid-cols-3 xl:grid-cols-4 xl:gap-x-8">
+          {features.map((items) => (
+            <a key={items.id} href={items.href} className="group">
+              
+              <h3 className="mt-4 text-sm text-gray-700">{items.name}</h3>
+              <p className="mt-1 text-lg font-medium text-gray-900">{items.description}</p>
+              <div className="w-full aspect-w-1 aspect-h-1 bg-gray-200 rounded-lg overflow-hidden xl:aspect-w-7 xl:aspect-h-8">
+                <img
+                  src={items.imageSrc}
+                  alt={items.imageAlt}
+                  className="w-full h-full object-center object-cover group-hover:opacity-75"
+                />
               </div>
-            ))}
-          </dl>
+            </a>
+          ))}
+        </div>
         </div>
       </div>
     </div>

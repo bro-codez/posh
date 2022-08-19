@@ -1,35 +1,34 @@
 /* eslint-disable prettier/prettier */
 /* eslint-disable react/jsx-key */
 /* eslint-disable prettier/prettier */
-import Carousel from 'react-multi-carousel';
-import { Star, Plus, Circle } from '../svgs';
-import { NewspaperIcon, StarIcon, ThumbUpIcon } from '@heroicons/react/outline';
+import Carousel from "react-multi-carousel";
+import { Star, Plus, Circle } from "../svgs";
+import { NewspaperIcon, StarIcon, ThumbUpIcon } from "@heroicons/react/outline";
 
-import 'react-multi-carousel/lib/styles.css';
-import { Section } from './layout/Section';
-
+import "react-multi-carousel/lib/styles.css";
+import { Section } from "./layout/Section";
 
 export const HeroSlide = (_props: any) => {
   const dataReview = [
     {
-      image_url: '/images/gyp1.jpg',
-      name: 'Interior Decoration',
+      image_url: "/images/gyp1.jpg",
+      name: "Interior Decoration",
     },
     {
-      image_url: '/images/fun1.jpg',
-      name: 'Gypsum',
+      image_url: "/images/fun1.jpg",
+      name: "Gypsum",
     },
     {
-      image_url: '/images/fit1.jpg',
-      name: 'Furniture',
+      image_url: "/images/fit1.jpg",
+      name: "Furniture",
     },
     {
-      image_url: '/images/gyp2.jpg',
-      name: 'Fittings',
+      image_url: "/images/gyp2.jpg",
+      name: "Fittings",
     },
     {
-      image_url: '/images/fun2.jpg',
-      name: 'Interior Design',
+      image_url: "/images/fun2.jpg",
+      name: "Interior Design",
     },
   ];
 
@@ -54,46 +53,35 @@ export const HeroSlide = (_props: any) => {
   };
 
   return (
-    <Section
-    >
+    <Section>
+      <Carousel
+        responsive={responsive}
+        swipeable={true}
+        draggable={true}
+        arrows={false}
+        showDots={false}
+        infinite={true}
+        containerClass=""
+        dotListClass="custom-dot-list-style"
+        itemClass=""
+        autoPlay={true}
+        autoPlaySpeed={6000}
+      >
+        {dataReview.map((item, _key) => (
+          <div className=" ">
+            <img
+              src={item.image_url}
+              alt=""
+              className="h-screen w-full mx-auto object-cover"
+            />
+            <div className="flex items-center mx-auto py-4 justify-center"></div>
 
-
-      
-        <Carousel
-          responsive={responsive}
-          swipeable={true}
-          draggable={true}
-          arrows={false}
-          showDots={false}
-          infinite={true}
-          containerClass=" max-w-7xl mx-auto"
-          dotListClass="custom-dot-list-style"
-          itemClass="rounded-lg "
-          autoPlay={true}
-          autoPlaySpeed={6000}
-          
-        >
-          {dataReview.map((item, _key) => (
-            <div className="bg-white py-2 px-4 mx-auto ">
-              <img
-                    src={item.image_url}
-                    alt=""
-                    className="h-full w-full mx-auto object-contain"
-              />
-                    <div className="flex items-center mx-auto py-4 justify-center">
-          
-        </div>
-                         
-              
-                  <h4 className="absolute top-40 lg:top-80 text-4xl font-bold text-center w-full mx-auto">{item.name}</h4>
-            </div>
-              
-      
-          ))}
-        </Carousel>
-        
-  
-      
+            <h4 className="absolute top-80 text-black text-8xl text-center w-full mx-auto">
+              {item.name}
+            </h4>
+          </div>
+        ))}
+      </Carousel>
     </Section>
   );
 };
