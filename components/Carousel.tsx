@@ -13,22 +13,22 @@ const regions = ['Region 1', 'Region 2', 'Region 3'];
 export const Carousel1 = (_props: any) => {
   const mainImgs = [
     {
-      image_url: '/hero/heros (1).jpg',
+      image_url: '/images/fun1.jpg',
       name: 'FUNITURE',
       description: `Interior Decoration.`,
     },
     {
-      image_url: '/hero/heros (4).jpg',
+      image_url: '/images/gyp1.jpg',
       name: 'GYPSUM',
       description: `Interior Design.`,
     },
     {
-      image_url: '/hero/heros (7).jpg',
+      image_url: '/images/gyp1.jpg',
       name: 'FITTINGS',
       description: `Interior Design`,
     },
     {
-      image_url: '/hero/heros (8).jpg',
+      image_url: '/images/gyp1.jpg',
       name: 'CURTAINS',
       description: `Interior Decoration.`,
     }

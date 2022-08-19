@@ -3,7 +3,7 @@ import { Carousel1 } from '../components/Carousel'
 
 
 import {
-  Banner,
+  
   Trending,
   Testimonials,
   Footer,
@@ -23,7 +23,7 @@ import PortfolioGrid from '../components/Portfolio';
 const Home: NextPage = () => {
   return(
   <>
-  <Carousel1 />
+  <PortfolioGrid />
   </>
 )};
 
