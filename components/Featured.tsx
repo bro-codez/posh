@@ -1,4 +1,4 @@
-/* This example requires Tailwind CSS v2.0+ */
+
 import { AnnotationIcon, BadgeCheckIcon, ShieldCheckIcon, ScaleIcon, UsersIcon } from '@heroicons/react/outline'
 
 const features = [
@@ -49,9 +49,9 @@ export default function Featured() {
   return (
     
       <div className="max-w-7xl mx-auto px-4 sm:px-6 ">
-        <div className="lg:text-center">
+        <div className="lg:text-center py-4 my-8">
           <p className="mt-2 text-2xl font-bold leading-8 tracking-tight text-black sm:text-4xl">
-        WHAT WE DO
+          WHAT WE DO
           </p>
         </div>
 

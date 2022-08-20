@@ -72,7 +72,7 @@ export const HeroSlide = (_props: any) => {
             <img
               src={item.image_url}
               alt=""
-              className="h-screen w-full mx-auto object-cover"
+              className="h-screen w-screen mx-auto object-cover"
             />
             <div className="flex items-center mx-auto py-4 justify-center"></div>
 

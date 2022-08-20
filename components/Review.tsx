@@ -11,7 +11,7 @@ import { Section } from "./layout/Section";
 export const PeopleReview = (_props: any) => {
   const dataReview = [
     {
-      image_url: "/images/client3.jpg",
+      image_url: "/images/client1.jpg",
       name: "Allison",
     },
     {
@@ -19,16 +19,12 @@ export const PeopleReview = (_props: any) => {
       name: "Kattie",
     },
     {
-      image_url: "/images/client5.jpg",
-      name: "Letty",
-    },
-    {
       image_url: "/images/client3.jpg",
-      name: "Letty",
+      name: "Sylvia",
     },
     {
-      image_url: "/images/client5.jpg",
-      name: "Letty",
+      image_url: "/images/client4.jpg",
+      name: "Ann",
     },
   ];
 
@@ -36,7 +32,7 @@ export const PeopleReview = (_props: any) => {
     superLargeDesktop: {
       // the naming can be any, depends on you.
       breakpoint: { max: 4000, min: 3000 },
-      items: 5,
+      items: 2,
     },
     desktop: {
       breakpoint: { max: 3000, min: 1024 },
@@ -44,7 +40,7 @@ export const PeopleReview = (_props: any) => {
     },
     tablet: {
       breakpoint: { max: 1024, min: 600 },
-      items: 2,
+      items: 1,
     },
     mobile: {
       breakpoint: { max: 500, min: 0 },
@@ -72,7 +68,7 @@ export const PeopleReview = (_props: any) => {
         autoPlaySpeed={6000}
       >
         {dataReview.map((item, _key) => (
-          <div className="bg-white text-black py-2 px-4 mx-auto ">
+          <div className="bg-white text-black py-4 px-4 mx-auto my-8">
             <img
               src={item.image_url}
               alt=""
