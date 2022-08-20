@@ -24,7 +24,7 @@ export const PeopleReview = (_props: any) => {
     },
     {
       image_url: "/images/client4.jpg",
-      name: "Ann",
+      name: "Proff",
     },
   ];
 

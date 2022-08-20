@@ -19,15 +19,15 @@ export const HeroSlide = (_props: any) => {
       name: "Gypsum",
     },
     {
-      image_url: "/images/fit1.jpg",
+      image_url: "/images/fit4.jpg",
       name: "Furniture",
     },
     {
-      image_url: "/images/gyp2.jpg",
+      image_url: "/images/fit5.jpg",
       name: "Fittings",
     },
     {
-      image_url: "/images/fun2.jpg",
+      image_url: "/images/bed.jpg",
       name: "Interior Design",
     },
   ];
