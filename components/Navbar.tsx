@@ -1,5 +1,4 @@
 /* eslint-disable prettier/prettier */
-/* This example requires Tailwind CSS v2.0+ */
 import { Fragment } from 'react';
 
 import { Disclosure, Menu, Transition } from '@headlessui/react';
@@ -61,7 +60,7 @@ export default function Navbar() {
                           item.current
                             ? 'bg-blue-900 text-white toggleColour'
                             : 'text-gray-300 hover:bg-gray-700 hover:text-white  text-lg',
-                          'px-2 py-2 rounded-md text-md hover:border-4'
+                          'px-2 my-4 rounded-md text-md hover:border-2'
                         )}
                         aria-current={item.current ? 'page' : undefined}
                       >
@@ -71,7 +70,7 @@ export default function Navbar() {
                   </div>
                 </div>
               </div>
-              <div className="absolute inset-y-0 right-0 flex items-center pr-2 sm:static sm:inset-auto sm:ml-6 sm:pr-0">
+              <div className="absolute hidden md:block inset-y-0 right-0 flex items-center pr-2 sm:static sm:inset-auto sm:ml-6 sm:pr-0">
               <button
                   type="button"
                   className="border-2 w-full py-2 px-4 flex rounded-sm  text-white hover:text-grey-400 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-offset-gray-800 focus:ring-white"

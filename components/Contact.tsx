@@ -19,10 +19,10 @@ const Contact = (props: IContactProps) => {
 
 <div className="w-full h-full relative flex items-center justify-left py-24">
 
-  <img aria-label="no idea" src="/hero/heros (8).jpg" className="absolute object-fill w-full h-full"/>
+  <img aria-label="no idea" src="/images/fun6.jpg" className="absolute object-cover w-full h-full"/>
 
   <div className="px-6 max-w-4xl relative z-10 text-center">
-    <h1 className="text-3xl md:text-4xl font-bold text-indigo-800 leading-tight mb-2">Contact Us</h1>
+    <h1 className="text-3xl md:text-4xl font-bold text-black leading-tight mb-2">Contact Us</h1>
   </div>
 
 </div>
@@ -185,7 +185,7 @@ const Contact = (props: IContactProps) => {
             ></textarea>
             <button
               type="submit"
-              className="bg-blue-500 rounded-md w-1/2 mx-4 mt-8 py-2 text-gray-50 text-xs font-bold"
+              className="bg-black rounded-md w-1/2 mx-4 mt-8 py-2 text-gray-50 text-xs font-bold"
             >
               Send Message
             </button>

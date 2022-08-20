@@ -12,12 +12,12 @@ const About = () => {
               <div className="w-full h-full relative flex items-center justify-left py-24">
                 <img
                   aria-label="no idea"
-                  src="/hero/heros (8).jpg"
-                  className="absolute object-fill w-full h-full"
+                  src="/images/comm1.jpg"
+                  className="absolute object-cover w-full h-full"
                 />
 
                 <div className="px-6 max-w-4xl relative z-10 text-center">
-                  <h1 className="text-3xl md:text-4xl font-bold text-slate-800 leading-tight mb-2">
+                  <h1 className="text-3xl md:text-4xl font-bold text-black leading-tight mb-2">
                     About us
                   </h1>
                 </div>
@@ -29,7 +29,7 @@ const About = () => {
             <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
               <div className="md:ml-4">
                 <img
-                  src="/native/boatrides (7).jpg"
+                  src="/images/fit5.jpg"
                   alt=""
                   className="w-full right-0 object-cover"
                   style={{ borderRadius: "0px 0px 0px 7rem" }}

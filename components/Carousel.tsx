@@ -19,7 +19,7 @@ export const HeroSlide = (_props: any) => {
       name: "Gypsum",
     },
     {
-      image_url: "/images/fit4.jpg",
+      image_url: "/images/fun2.jpg",
       name: "Furniture",
     },
     {
@@ -72,11 +72,11 @@ export const HeroSlide = (_props: any) => {
             <img
               src={item.image_url}
               alt=""
-              className="h-screen w-screen mx-auto object-cover"
+              className="h-screen w-screen mx-auto object-cover brightness-50"
             />
             <div className="flex items-center mx-auto py-4 justify-center"></div>
 
-            <h4 className="absolute top-80 text-black text-8xl text-center w-full mx-auto">
+            <h4 className="absolute text-white top-80 text-6xl text-center w-full mx-auto">
               {item.name}
             </h4>
           </div>
