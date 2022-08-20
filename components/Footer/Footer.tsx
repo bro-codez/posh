@@ -57,7 +57,7 @@ const Footer = () => (
             </a>
         </div>
     </div>
-    <div className="container mx-auto text-center py-12 mt-12 border-t border-gray-200 text-black uppercase">
+    <div className="container mx-auto text-center py-12 mt-12 border-t border-gray-200 text-black uppercase text-sm">
         <div>Copyright &copy; 2022 POSH INTERIORS</div>
         
     </div>
