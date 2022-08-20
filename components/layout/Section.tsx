@@ -26,7 +26,7 @@ const Section = (props: ISectionProps) => (
           <div className=" font-acrosmyth  text-xl text-center  underline">{props.description}</div>
         )} {props.title && (
           <>
-          <h2 className="text-2xl md:text-4xl tracking-widest text-center uppercase w-full mx-auto">{props.title}</h2>
+          <h2 className="text-2xl font bold md:text-4xl tracking-widest text-center uppercase w-full mx-auto">{props.title}</h2>
           
           </>
         )}

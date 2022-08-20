@@ -135,7 +135,7 @@ export default function Projects() {
   return (
     <div className="w-full max-w-7xl mx-auto px-2 py-16 sm:px-0 text-black">
        <div className="lg:text-center">
-          <p className="mt-2 text-3xl leading-8 tracking-tight text-black sm:text-4xl">
+          <p className="mt-2 text-3xl leading-8 tracking-tight text-black font-bold sm:text-4xl">
         PROJECTS
           </p>
         </div>
