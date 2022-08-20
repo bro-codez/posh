@@ -31,11 +31,11 @@ const Contact = (props: IContactProps) => {
 
       
    
-   <div className="relative z-10 rounded-md shadow-md  p-4 md:p-10 lg:p-20 max-w-6xl mx-auto mb-20 -mt-4 bg-indigo-800">
+   <div className="relative z-10 rounded-md shadow-md  p-4 md:p-10 lg:p-20 max-w-6xl mx-auto mb-20 -mt-4 ">
         <div className="grid grid-cols-1 md:grid-cols-2 gap-4  bg-blur-xl">
           <div className="md:ml-4">
             <header className="">
-              <h1 className="text-slate-900 font-semibold text-4xl">
+              <h1 className="text-slate-900 font-semibold text-md">
                 Get in touch, let's talk.
               </h1>
               <p className="font-light  text-slate-900 text-2xl mt-2">
