@@ -38,7 +38,7 @@ const About = () => {
               <div className=" text-slate-900 md:h-full w-full md:flex-1 flex justify-left items-left">
                 <div className=" md:px-16">
                   <h1 className="font-bold text-slate-900 text-4xl md:text-6xl mb-6">
-                    LET US BUILD YOURS DREAM
+                    Redefining Spaces
                   </h1>
 
                   <p className="mb-6 leading-normal text-slate-900 text-lg md:text-base">
